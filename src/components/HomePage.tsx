@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion'; // Correct import
 
 const HomePage = () => {
     return (
@@ -7,14 +8,17 @@ const HomePage = () => {
         <div className='w-full h-full'>
             
             {/* Quick And Easy Div */}
-            <div className='flex flex-col justify-center items-center h-[70vh] w-full bg-red-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center p-4'>
+            <motion.div className='flex flex-col justify-center items-center h-[70vh] w-full bg-red-800 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center p-4'
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+            >
                             <p>I make the mortgage process simple, <br>
                 </br>stress-free, quick and easy.</p>
                 
                             <button className="bg-black text-white text-xl md:text-2xl font-bold py-[2vh] px-[4vh] mt-[5vh] rounded hover:bg-gray-800 transition duration-300">
                     Chat With Me
                 </button>
-            </div>
+            </motion.div>
             
             {/* Why Use Div */}
             <div className='flex flex-col lg:flex-row justify-center items-center h-auto lg:h-[90vh] w-full bg-blue-800 text-center text-xl md:text-2xl lg:text-4xl font-bold break-words p-4 space-y-5 lg:space-y-0'>
@@ -258,6 +262,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
+            {/* Reviews Div */}
         </div>
     )
 }
