@@ -12,7 +12,7 @@ const PreApp = () => {
                 {/* Text Div */}
                 <div className='lg:w-[60%] w-[100%] text-base md:text-lg lg:text-xl'>
                     <h1 className=' p-[2vh] lg:mt[5vh] mt-[20vh] mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
-                        Pre-Approval Application <br /> & Consent Form
+                        Contact Me <br />
                     </h1>      
                     <div className='text-left lg:truncate bg-green-500 p-4 rounded'>
                         <li> MLS (Purchasing) </li>
