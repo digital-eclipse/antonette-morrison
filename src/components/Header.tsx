@@ -9,7 +9,7 @@ const Header = ({ setSection }) => {
         <div className="z-50 fixed top-0 flex flex-row justify-between items-center h-[15vh] w-full bg-[#ffb5c9] shadow-md">
 
             {/* Logo Div - Visible on all screens */}
-            <div className='flex items-center h-full pl-[5vh] lg:pl-[15vh]'>
+            <div className='flex items-center h-full pl-[16vh] lg:pl-[15vh]'>
                 <div className="relative w-[22vh] h-[20vh]">
                     <Image
                         src='/images/newlogo.png'

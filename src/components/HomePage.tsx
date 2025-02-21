@@ -14,7 +14,7 @@ const HomePage = ({ setSection }) => {
             >
                 <p>I make the mortgage process simple, <br className='hidden lg:block'></br>stress-free, quick and easy.</p>
                 
-                <button className="bg-black text-white text-xl md:text-2xl font-bold py-[2vh] px-[4vh] mt-[5vh] rounded hover:bg-gray-800 transition duration-300">
+                <button onClick={() => setSection('contact')} className="bg-black text-white text-xl md:text-2xl font-bold py-[2vh] px-[4vh] mt-[5vh] rounded hover:bg-gray-800 transition duration-300">
                     Chat With Me
                 </button>
             </motion.div>
@@ -65,10 +65,10 @@ const HomePage = ({ setSection }) => {
             <div className='w-full text-left text-xl md:text-2xl lg:text-4xl font-bold break-words'>
                 
                 {/* Purchases Div */}
-                <div className='flex lg:flex-row flex-col justify-center items-center min-h-[90vh] bg-white py-[4vh]'>
+                <div className='flex lg:flex-row flex-col justify-center items-center lg:h-[90vh] h:-[120vh] bg-white py-[4vh]'>
                     
                     {/* Text Div */}
-                    <div className='lg:w-[35%] m-[3vh] bg-[#ffe5ec] bg-white p-[2vh] rounded-2xl text-base md:text-lg lg:text-xl'>
+                    <div className='lg:w-[35%] m-[3vh] bg-[#ffe5ec] bg-[#ffe5ec] p-[2vh] rounded-2xl text-base md:text-lg lg:text-xl'>
                         
                         <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center lg:text-left'>
                             Purchases (Residential, Investments & Commercial)

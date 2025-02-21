@@ -1,19 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion'; // Correct import
+import Footer from './Footer';
 
-const About = () => {
+const About = ({setSection}) => {
     return (
         <div className='w-full h-full'>
             
-            {/* About Me */}
-            <div className='w-full h-[100vh] mt-[15vh] px-[60vh] flex flex-col justify-center items-center bg-red-500 text-bold '>
+            {/* Main Div */}
+            <div className='w-full lg:h-[130vh] h-[195vh] lg:mt-[6vh] lg:px-[60vh] mt-[12vh] flex flex-col justify-center items-center bg-white text-bold '>
                 {/* Title Div */}
-                <div className='bg-green-500 font-bold text-5xl mb-[2vh]'>
+                <div className='font-bold text-7xl lg:mb-[3vh] lg:mt-[10vh] mb-[3vh]'>
                     About Me
                 </div>
                 {/* Body Div */}
-                <div>
+                <div className=' bg-[#ffe5ec] p-[2vh] rounded-2xl mb-[3vh] mx-[3vh] '>
                 When I was 12 years old, my parents decided to migrate in Canada in hopes of a better future for my brothers and I. My father left behind his Engineering career in Saudi Arabia and joined his family-owned home renovation business here in Ontario. Growing up, I saw my parents work hard and my mom working 2 jobs to support us and her family in the Philippines. As we start over, for a few years we rented different homes in Markham and Scarborough while my parents tried best to save and hoping one day, they will own their own home.
                 <br></br>
                 <br></br>
@@ -34,22 +35,26 @@ const About = () => {
             </div>
             
             {/* Accolades */}
-            <div className='w-full h-[40vh] px-[60vh] flex flex-col justify-center items-center bg-green-500 text-bold '>
-                {/* Title Div */}
-                <div className='bg-green-500 text-5xl mb-[2vh] font-bold'>
-                    My Accolades
+            <div className='w-full lg:h-[50vh] h-[80vh] lg:px-[60vh] flex flex-col justify-center items-center bg-[#ffe5ec] text-bold '>
+                
+                {/* Sticker Div */}
+                <div className='bg-white m-[3vh] mt-[4vh] lg:w-[87.5vh] lg:px-[5vh] rounded-2xl p-[2vh]'>
+                    {/* Title Div */}
+                    <div className='text-5xl m-[2vh] font-bold'>
+                        My Accolades
+                    </div>
+                    {/* Body Div */}
+                    <div className='text-3xl leading-relaxed font-bold'>
+                    <li> 2017 Atlantic (HS) Financial Corp. MVP </li>
+                    <li> 2018 Atlantic (HS) Financial Corp. Most <br></br>Improved Broker </li>
+                    <li> 2019 Atlantic (HS) Financial Corp. MVP </li>
+                    <li> 2021 Equitable Bank Top Performing Broker </li>
+                    </div>
                 </div>
-                {/* Body Div */}
-                <div className='text-3xl leading-relaxed font-bold'>
-                2017 Atlantic (HS) Financial Corp. MVP
-                <br></br>
-                2018 Atlantic (HS) Financial Corp. Most Improve Broker
-                <br></br>
-                2019 Atlantic (HS) Financial Corp. MVP
-                <br></br>
-                2021 Equitable Bank Top Performing Broker
-                </div>
+                
             </div>
+
+            <Footer setSection={setSection} />
             
         </div>
     );

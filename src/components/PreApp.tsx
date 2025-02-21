@@ -1,20 +1,27 @@
 import React from 'react';
 import Image from 'next/image';
+import Footer from './Footer';
 
-const PreApp = () => {
+const PreApp = ({setSection}) => {
     return (
         // Main Div
         <div className='w-full h-full'>
 
             {/* PreApp Div */}
-            <div className='flex flex-col lg:flex-row justify-center items-center h-auto lg:h-[100vh] w-full bg-blue-800 text-center text-xl md:text-2xl lg:text-4xl font-bold break-words p-4 space-y-5 lg:space-y-0'>
+            <div className='flex flex-col lg:flex-row justify-center items-center h-auto lg:h-[110vh] w-full  bg-white text-center text-xl md:text-2xl lg:text-4xl font-bold break-words p-4 space-y-5 lg:space-y-0'>
 
                 {/* Text Div */}
                 <div className='lg:w-[60%] w-[100%] text-base md:text-lg lg:text-xl'>
-                    <h1 className=' p-[2vh] lg:mt[5vh] mt-[20vh] mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
-                        Contact Me <br />
-                    </h1>      
-                    <div className='text-left lg:truncate bg-green-500 p-4 rounded'>
+                    <h1 className=' p-[2vh] lg:mt[2vh] lg:mt-[20vh] mt-[15vh] mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
+                        Pre-Approval Application & Consent Forms  <br />
+                    </h1>
+
+                    {/* Body div  */}
+                    <div className='text-left bg-[#ffe5ec] p-[3vh] mb-[3vh] mx-[2vh] rounded-2xl'>
+                        {/* Subtitle div */}
+                        <h1 className='mx-[2vh] text-2xl sm:text-3xl md:text-2xl lg:text-4xl '>
+                            Why Use Me As Your Mortgage Broker?
+                        </h1>   
                         <li> MLS (Purchasing) </li>
                         <li> Purchase Sale Agreement (Purchasing) </li>
                         <li> Three (3) months recent bank statement for proof of down payment </li>
@@ -29,23 +36,25 @@ const PreApp = () => {
                         <li>Lease agreement for rental properties</li>
                         <li>Employed Income - Letter of Employment, 2 recent paystubs, T4 or T4A statement, Notice of Assessment</li>
                         <li>Self- Employed - Business License, Articles of Incorporation, Six (6) recent business bank statement</li>
+
+                        <button className="bg-black text-white text-xl md:text-2xl ml-[10vh] font-bold py-[2vh] px-[4vh] mt-[3vh] mb-[2vh] rounded hover:bg-gray-800 transition duration-300">
+                            Apply Here
+                        </button>
                     </div>
 
-                    <button className="bg-black text-white text-xl md:text-2xl font-bold py-[2vh] px-[4vh] mt-[3vh] rounded hover:bg-gray-800 transition duration-300">
-                        Apply Here
-                    </button>
+                    {/* Fine Text Div */}
+                    <div className='px-[3vh] lg:h-[10vh] h-[12vh] w-full bg-white text-center text-sm text-bold break-words'>
+                        By clicking 'Submit' within the application form, you authorize Atlantic (HS) Financial Corporation and 
+                        <br></br>its agents contact you electronically. It is understood that the purpose of this form is to collect
+                        <br></br> preliminary information, additional information will be required and you will be contacted 
+                        <br></br> by Atlantic (HS) Financial Corporation within 24 business hours
+                    </div>
                 </div>
             </div>
-            {/* Fine Text Div */}
-            <div className='px-[3vh] lg:h-[10vh] h-[22vh] w-full bg-red-500 text-center text-bold break-words'>
-            By clicking 'Submit' within the application form, you authorize Atlantic (HS) Financial Corporation and 
-            <br></br>its agents contact you electronically. It is understood that the purpose of this form is to collect
-            <br></br> preliminary information, additional information will be required and you will be contacted 
-            <br></br> by Atlantic (HS) Financial Corporation within 24 business hours
-            </div>
+
 
             {/* Image Div */}
-            <div className='flex flex-col justify-center items-center bg-orange-500 lg:p-0'>
+            <div className='flex flex-col justify-center items-center bg-white lg:p-0'>
                 
                 {/* Image Container */}
                 <div className='relative w-[40vh] h-[40vh] lg:w-[50vh] lg:h-[30vh] lg:mt-[3vh]'>
@@ -57,6 +66,7 @@ const PreApp = () => {
                     />
                 </div>
             </div>
+                <Footer setSection={setSection} />
         </div>
     )
 }

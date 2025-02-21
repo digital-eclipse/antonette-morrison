@@ -7,6 +7,7 @@ import HomePage from "@/components/HomePage";
 import PreApp from "@/components/PreApp";
 import About from "@/components/About";
 import Contact from '@/components/Contact';
+import Footer from '@/components/Footer'; // Import the Footer component
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('home');
@@ -21,9 +22,9 @@ export default function Home() {
     <div className="items-center justify-items-center min-h-screen">
       <Header setSection={setCurrentSection} />
       {currentSection === 'home' && <HomePage setSection={setCurrentSection}/>}
-      {currentSection === 'preapp' && <PreApp/>}
-      {currentSection === 'about' && <About/>}
-      {currentSection === 'contact' && <Contact/>}
+      {currentSection === 'preapp' && <PreApp setSection={setCurrentSection}/>}
+      {currentSection === 'about' && <About setSection={setCurrentSection}/>}
+      {currentSection === 'contact' && <Contact setSection={setCurrentSection}/>}
     </div>
   );
 }
