@@ -16,7 +16,7 @@ const Contact: React.FC<ContactProps> = ({ setSection }) => {
             {/* Contact Me */}
             <div className='w-full lg:h-[110vh] lg:px-[60vh] lg:mt-[15vh] flex pt-[10vh] flex-col justify-center items-center bg-white text-bold '>
                 {/* Title Div */}
-                <div className='font-bold lg:w-[200vh] text-5xl text-center lg:mt-[14vh] mt-[11vh] mb-[5vh]'>
+                <div className='font-bold lg:w-[200vh] text-7xl text-center lg:mt-[14vh] mt-[11vh] mb-[5vh]'>
                     Contact Me
                 </div>
                 {/* Body Div */}
