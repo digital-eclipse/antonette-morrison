@@ -56,7 +56,9 @@ const About: React.FC<AboutProps> = ({ setSection }) => {
         </div>
       </div>
 
-      <Footer setSection={setSection} />
+      <div className='lg:mt-[20vh] block sm:hidden'>  
+                <Footer setSection={setSection} />  
+            </div> 
     </div>
   );
 };
