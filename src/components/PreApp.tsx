@@ -1,8 +1,16 @@
+"use client"
+
 import React from 'react';
 import Image from 'next/image';
 import Footer from './Footer';
 
-const PreApp = ({setSection}) => {
+interface PreAppProps {
+  setSection: (section: string) => void;
+}
+
+const PreApp: React.FC<PreAppProps> = ({ setSection }) => {
+
+
     return (
         // Main Div
         <div className='w-full h-full'>
@@ -44,7 +52,7 @@ const PreApp = ({setSection}) => {
 
                     {/* Fine Text Div */}
                     <div className='px-[3vh] lg:h-[10vh] h-[12vh] w-full bg-white text-center text-sm text-bold break-words'>
-                        By clicking 'Submit' within the application form, you authorize Atlantic (HS) Financial Corporation and 
+                        By clicking &apos;Submit&apos; within the application form, you authorize Atlantic (HS) Financial Corporation and 
                         <br></br>its agents contact you electronically. It is understood that the purpose of this form is to collect
                         <br></br> preliminary information, additional information will be required and you will be contacted 
                         <br></br> by Atlantic (HS) Financial Corporation within 24 business hours

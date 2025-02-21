@@ -1,8 +1,16 @@
+"use client"
+
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion'; // Correct import
 
-const HomePage = ({ setSection }) => {
+// Define the type for the props
+interface HomePageProps {
+    setSection: (section: string) => void;
+  }
+
+const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
+
     return (
         // Main Div
         <div className='w-full h-full'>
@@ -49,9 +57,9 @@ const HomePage = ({ setSection }) => {
                         Canadian Mortgages have been constantly changing with rates frequently fluctuating in this competitive market.
                         As a licensed mortgage broker in the provinces of Ontario and Alberta,
                         I have helped many Canadians reach their home ownership goals.
-                        Understanding my client's unique situations, combined with my 6+ years of experience in Mortgage Brokering and access to over 44 Banks,
-                        Trust companies, Credit Unions, Private/MIC lenders and partners, I'm able to provide the right mortgage
-                        solutions tailored to your needs and goals. I'm a true believer that for every problem there are infinite solutions.
+                        Understanding my client&apos;s unique situations, combined with my 6+ years of experience in Mortgage Brokering and access to over 44 Banks,
+                        Trust companies, Credit Unions, Private/MIC lenders and partners, I&apos;m able to provide the right mortgage
+                        solutions tailored to your needs and goals. I&apos;m a true believer that for every problem there are infinite solutions.
                         I am conveniently available to answer your inquiries on weekdays, weekends, and evenings.
                     </h3>
 
@@ -75,7 +83,7 @@ const HomePage = ({ setSection }) => {
                         </h1>           
                         
                         <h3 className='rounded'>
-                            Purchasing a property whether it's your first home, investment/rental property or commercial property is likely the biggest financial purchase one could make in their life time. I'm committed to providing multiple mortgage options to New to Canada clients, First Time Home Buyers, Salaried, Self-employed or unstable income earners alike. To make this process easy and seamless, I provide the following services: 
+                            Purchasing a property whether it&apos;s your first home, investment/rental property or commercial property is likely the biggest financial purchase one could make in their life time. I&apos;m committed to providing multiple mortgage options to New to Canada clients, First Time Home Buyers, Salaried, Self-employed or unstable income earners alike. To make this process easy and seamless, I provide the following services: 
                         </h3>
                         
                         {/* List Div */}

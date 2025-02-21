@@ -7,7 +7,6 @@ import HomePage from "@/components/HomePage";
 import PreApp from "@/components/PreApp";
 import About from "@/components/About";
 import Contact from '@/components/Contact';
-import Footer from '@/components/Footer'; // Import the Footer component
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('home');

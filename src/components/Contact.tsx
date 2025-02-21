@@ -1,17 +1,14 @@
+"use client"
+
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion'; // Correct import
 import Footer from './Footer';
 
-const Contact = ({ setSection }) => {
+interface ContactProps {
+  setSection: (section: string) => void;
+}
 
-    const handleClick = () => {
-        if (typeof setSection === 'function') {
-          setSection('home');
-        } else {
-          console.error("setSection is not a function:", setSection);
-        }
-      };
+const Contact: React.FC<ContactProps> = ({ setSection }) => {
 
     return (
         <div className='w-full h-full'>
