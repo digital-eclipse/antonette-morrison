@@ -11,15 +11,14 @@ interface PreAppProps {
 const PreApp: React.FC<PreAppProps> = ({ setSection }) => {
 
     return (
-        // Main Div
         <div className='w-full h-full'>
 
             {/* PreApp Div */}
-            <div className='flex flex-col lg:flex-row justify-center items-center h-[130vh] lg:h-[110vh] w-full  bg-white text-center text-xl md:text-2xl lg:text-4xl font-bold break-words p-4 space-y-5 lg:space-y-0'>
+            <div className='flex flex-col lg:flex-row justify-center items-center w-full  bg-white text-center text-xl md:text-2xl lg:text-4xl font-bold break-words p-4 space-y-5 lg:space-y-0'>
 
                 {/* Text Div */}
                 <div className='lg:w-[60%] w-[100%] text-base md:text-lg lg:text-xl'>
-                    <h1 className=' p-[2vh] lg:mt[2vh] lg:mt-[20vh] mt-[15vh] mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
+                    <h1 className=' p-[2vh] mb-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
                         Pre-Approval Application & Consent Forms  <br />
                     </h1>
 
@@ -51,7 +50,7 @@ const PreApp: React.FC<PreAppProps> = ({ setSection }) => {
                     </div>
 
                     {/* Fine Text Div */}
-                    <div className='px-[3vh] lg:h-[10vh] h-[12vh] w-full bg-white text-center text-sm text-bold break-words'>
+                    <div className='px-[3vh] w-full bg-white text-center text-sm text-bold break-words'>
                         By clicking &apos;Submit&apos; within the application form, you authorize Atlantic (HS) Financial Corporation and 
                         <br></br>its agents contact you electronically. It is understood that the purpose of this form is to collect
                         <br></br> preliminary information, additional information will be required and you will be contacted 
@@ -62,7 +61,7 @@ const PreApp: React.FC<PreAppProps> = ({ setSection }) => {
 
 
             {/* Image Div */}
-            <div className='flex flex-col justify-center items-center bg-white lg:p-0'>
+            <div className='flex flex-col justify-center items-center bg-white lg:p-0 min-h-[10vh]'>
                 
                 {/* Image Container */}
                 <div className='relative w-[40vh] h-[40vh] lg:w-[50vh] lg:h-[30vh] lg:mt-[3vh] lg:mb-[3vh]'>

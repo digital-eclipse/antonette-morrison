@@ -18,10 +18,10 @@ export default function Home() {
   }, [currentSection]); // Triggered when currentSection changes
 
   return (
-    <div className="items-center justify-items-center min-h-screen">
-      <Header setSection={setCurrentSection} />
+<div className="flex flex-col items-center justify-items-center h-screen w-full">
+    <Header setSection={setCurrentSection} />
       {currentSection === 'home' && <HomePage setSection={setCurrentSection}/>}
-      {currentSection === 'preapp' && <PreApp setSection={setCurrentSection}/>}
+      {currentSection === 'pre-approvals' && <PreApp setSection={setCurrentSection}/>}
       {currentSection === 'about' && <About setSection={setCurrentSection}/>}
       {currentSection === 'contact' && <Contact setSection={setCurrentSection}/>}
     </div>

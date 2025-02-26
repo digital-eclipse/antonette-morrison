@@ -12,13 +12,13 @@ const About: React.FC<AboutProps> = ({ setSection }) => {
   return (
     <div className='w-full h-full'>
       {/* Main Div */}
-      <div className='w-full lg:h-[130vh] h-[195vh] lg:mt-[6vh] lg:px-[60vh] mt-[12vh] flex flex-col justify-center items-center bg-white text-bold '>
+      <div className='w-full  lg:px-[60vh] flex flex-col justify-center items-center bg-white text-bold p-8'>
         {/* Title Div */}
-        <div className='font-bold text-7xl lg:mb-[3vh] lg:mt-[10vh] mb-[3vh]'>
+        <div className='font-bold text-4xl sm:text-7xl mb-4'>
           About Me
         </div>
         {/* Body Div */}
-        <div className=' bg-[#ffe5ec] p-[2vh] rounded-2xl mb-[3vh] mx-[3vh] '>
+        <div className=' bg-[#ffe5ec] p-[2vh] rounded-2xl mb-[3vh] sm:mx-[3vh] '>
           When I was 12 years old, my parents decided to migrate in Canada in hopes of a better future for my brothers and I. My father left behind his Engineering career in Saudi Arabia and joined his family-owned home renovation business here in Ontario. Growing up, I saw my parents work hard and my mom working 2 jobs to support us and her family in the Philippines. As we start over, for a few years we rented different homes in Markham and Scarborough while my parents tried best to save and hoping one day, they will own their own home.
           <br></br>
           <br></br>
@@ -39,15 +39,15 @@ const About: React.FC<AboutProps> = ({ setSection }) => {
       </div>
 
       {/* Accolades */}
-      <div className='w-full lg:h-[50vh] h-[80vh] lg:px-[60vh] flex flex-col justify-center items-center bg-[#ffe5ec] text-bold '>
+      <div className='w-full lg:px-[60vh] flex flex-col justify-center items-center bg-[#ffe5ec] text-bold '>
         {/* Sticker Div */}
-        <div className='bg-white m-[3vh] mt-[4vh] lg:w-[87.5vh] lg:px-[5vh] rounded-2xl p-[2vh]'>
+        <div className='bg-white m-[3vh] mt-[4vh] lg:w-[87.5vh] lg:px-[5vh] rounded-2xl p-[2vh] space-y-2'>
           {/* Title Div */}
-          <div className='text-5xl m-[2vh] font-bold'>
+          <div className='text-3xl sm:text-5xl font-bold'>
             My Accolades
           </div>
           {/* Body Div */}
-          <div className='text-3xl leading-relaxed font-bold'>
+          <div className='text-xl sm:text-3xl leading-relaxed font-bold'>
             <li> 2017 Atlantic (HS) Financial Corp. MVP </li>
             <li> 2018 Atlantic (HS) Financial Corp. Most <br></br>Improved Broker </li>
             <li> 2019 Atlantic (HS) Financial Corp. MVP </li>

@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from 'react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Image from "next/image";
 
 // Define the type for the props
 interface HeaderProps {
@@ -12,25 +12,25 @@ const Header: React.FC<HeaderProps> = ({ setSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    // Main Div
-    <div className="z-50 fixed top-0 flex flex-row justify-between items-center h-[15vh] w-full bg-[#ffb5c9] shadow-md">
-      {/* Logo Div - Visible on all screens */}
-      <div className='flex items-center h-full pl-[16vh] lg:pl-[15vh]'>
-        <div className="relative w-[22vh] h-[20vh]">
+    // Main Header
+    <header className="z-50 relative top-0 flex justify-between items-center w-full bg-[#ffb5c9] shadow-md px-6 lg:px-16 py-8">
+      {/* Logo Section */}
+      <div className="flex items-center h-full">
+        <div className="relative w-[25vw] h-[15vw] sm:w-[22vw] sm:h-[10vw] sm:max-w-[150px] sm:max-h-[80px]">
           <Image
-            src='/images/newlogo.png'
-            alt='Antonette'
-            layout='fill'
-            objectFit='contain'
+            src="/images/newlogo.png"
+            alt="Antonette"
+            layout="fill"
+            objectFit="contain"
           />
         </div>
       </div>
 
-      {/* Hamburger Menu for Mobile */}
-      <div className="lg:hidden pr-[5vh]">
+      {/* Hamburger Menu (Mobile) */}
+      <div className="flex sm:hidden">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="bg-transparent hover:bg-gray-500 hover:rounded-full transition-all duration-300"
+          className="bg-transparent hover:bg-gray-500 p-2 rounded-full transition-all duration-300"
         >
           <svg
             className="w-8 h-8"
@@ -49,52 +49,42 @@ const Header: React.FC<HeaderProps> = ({ setSection }) => {
         </button>
       </div>
 
-      {/* Button Div - Visible on Large Screens */}
-      <div className='hidden lg:flex items-center lg:flex-row'>
-        <button onClick={() => setSection('home')} className="bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] m-[1.5vh] rounded hover:bg-gray-800 transition duration-300">
-          Home
-        </button>
-        <button onClick={() => setSection('preapp')} className="bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] m-[1.5vh] rounded hover:bg-gray-800 transition duration-300">
-          Pre-Approvals
-        </button>
-        <button onClick={() => setSection('about')} className="bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] m-[1.5vh] rounded hover:bg-gray-800 transition duration-300">
-          About
-        </button>
-        <button className="bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] m-[1.5vh] rounded hover:bg-gray-800 transition duration-300">
-          Testimonials
-        </button>
-        <button
-          onClick={() => setSection('contact')}
-          className="bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] m-[1.5vh] mr-[5vh] rounded hover:bg-gray-800 transition duration-300"
-        >
-          Contact
-        </button>
-      </div>
+      {/* currently no testimonials so render this button anohter time "Testimonials",*/}
+      {/* Navigation (Desktop) */}
+      <nav className="hidden sm:flex space-x-6">
+        {["Home", "Pre-Approvals", "About", "Contact"].map(
+          (label, index) => (
+            <button
+              key={index}
+              onClick={() => setSection(label.toLowerCase().replace(" ", ""))}
+              className="bg-black text-white text-lg font-semibold py-2 px-6 rounded hover:bg-gray-800 transition duration-300"
+            >
+              {label}
+            </button>
+          )
+        )}
+      </nav>
 
-      {/* Mobile Menu - Visible on Small Screens */}
+      {/* Mobile Menu (Dropdown) */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-[15vh] w-full py-[2vh] bg-white shadow-lg flex flex-col items-center">
-          <button onClick={() => { setSection('home'); setIsMenuOpen(false); }} className="w-[90%] text-center bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] my-[1.5vh] rounded hover:bg-gray-800 transition duration-300">
-            Home
-          </button>
-          <button onClick={() => { setSection('preapp'); setIsMenuOpen(false); }} className="w-[90%] text-center bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] my-[1.5vh] rounded hover:bg-gray-800 transition duration-300">
-            Pre-Approvals
-          </button>
-          <button onClick={() => { setSection('about'); setIsMenuOpen(false); }} className="w-[90%] text-center bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] my-[1.5vh] rounded hover:bg-gray-800 transition duration-300">
-            About
-          </button>
-          <button className="w-[90%] text-center bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] my-[1.5vh] rounded hover:bg-gray-800 transition duration-300">
-            Testimonials
-          </button>
-          <button
-            onClick={() => { setSection('contact'); setIsMenuOpen(false); }}
-            className="w-[90%] text-center bg-black text-white text-2xl font-bold py-[1.5vh] px-[3vh] my-[1.5vh] rounded hover:bg-gray-800 transition duration-300"
-          >
-            Contact
-          </button>
+        <div className="lg:hidden absolute top-[100%] inset-x-0 w-full bg-white shadow-lg flex flex-col items-center py-4 ">
+          {["Home", "Pre-Approvals", "About", "Contact"].map(
+            (label, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setSection(label.toLowerCase().replace(" ", ""));
+                  setIsMenuOpen(false);
+                }}
+                className="w-[90%] text-center bg-black text-white text-lg font-semibold py-3 my-2 rounded hover:bg-gray-800 transition duration-300"
+              >
+                {label}
+              </button>
+            )
+          )}
         </div>
       )}
-    </div>
+    </header>
   );
 };
 

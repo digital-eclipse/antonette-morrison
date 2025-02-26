@@ -16,7 +16,7 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
         <div className='w-full h-full'>
             
             {/* Quick And Easy Div */}
-            <motion.div className='flex flex-col justify-center items-center lg:h-[50vh] h-[40vh] w-full mt-[13vh] bg-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center'
+            <motion.div className='flex flex-col justify-center items-center lg:h-[50vh] h-[40vh] w-full  bg-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center'
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
             >
@@ -28,7 +28,7 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
             </motion.div>
             
             {/* Why Use Div */}
-            <div className='flex flex-col lg:flex-row justify-center items-center lg:h-[80vh] h-[130vh] w-full bg-[#ffe5ec] text-center text-xl md:text-2xl lg:text-4xl font-bold break-words p-4 space-y-5 lg:space-y-0'>
+            <div className='flex flex-col lg:flex-row justify-center items-center lg:h-[80vh] min-h-[1200px] sm:min-h-none h-[130vh] w-full bg-[#ffe5ec] text-center text-xl md:text-2xl lg:text-4xl font-bold break-words p-4 space-y-5 lg:space-y-0'>
                 
                 {/* Image Div */}
                 <div className='flex flex-col justify-center items-center lg:mr-8 p-4 lg:p-0'>
