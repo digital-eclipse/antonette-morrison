@@ -13,10 +13,10 @@ const Header: React.FC<HeaderProps> = ({ setSection }) => {
 
   return (
     // Main Header
-    <header className="z-50 relative top-0 flex justify-between items-center w-full bg-[#ffb5c9] shadow-md px-6 lg:px-16 py-8">
+    <header className="z-50 relative top-0 flex justify-between sm:justify-start items-center w-full bg-[#ffb5c9] shadow-md px-6 lg:px-16 py-3">
       {/* Logo Section */}
       <div className="flex items-center h-full">
-        <div className="relative w-[25vw] h-[15vw] sm:w-[22vw] sm:h-[10vw] sm:max-w-[150px] sm:max-h-[80px]">
+        <div className="relative w-[25vw] h-[15vw] sm:w-[22vw] sm:h-[4vw] sm:max-w-[150px] sm:max-h-[80px]">
           <Image
             src="/images/newlogo.png"
             alt="Antonette"
@@ -51,13 +51,13 @@ const Header: React.FC<HeaderProps> = ({ setSection }) => {
 
       {/* currently no testimonials so render this button anohter time "Testimonials",*/}
       {/* Navigation (Desktop) */}
-      <nav className="hidden sm:flex space-x-6">
+      <nav className="hidden sm:flex space-x-2">
         {["Home", "Pre-Approvals", "About", "Contact"].map(
           (label, index) => (
             <button
               key={index}
               onClick={() => setSection(label.toLowerCase().replace(" ", ""))}
-              className="bg-black text-white text-lg font-semibold py-2 px-6 rounded hover:bg-gray-800 transition duration-300"
+              className="text-black text-md  py-2 px-6 rounded hover:scale-110 transition duration-300"
             >
               {label}
             </button>
