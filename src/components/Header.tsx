@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ setSection }) => {
 
       {/* Mobile Menu (Dropdown) */}
       {isMenuOpen && (
-        <div className="lg:hidden absolute top-[100%] inset-x-0 w-full bg-white shadow-lg flex flex-col items-center py-4 ">
+        <div className="lg:hidden absolute top-[100%] inset-x-0 w-full bg-[#ffb5c9] shadow-lg flex flex-col items-center py-2 ">
           {["Home", "Pre-Approvals", "About", "Contact"].map(
             (label, index) => (
               <button
@@ -76,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({ setSection }) => {
                   setSection(label.toLowerCase().replace(" ", ""));
                   setIsMenuOpen(false);
                 }}
-                className="w-[90%] text-center bg-black text-white text-lg font-semibold py-3 my-2 rounded hover:bg-gray-800 transition duration-300"
+                className="w-[90%] text-center text-black text-lg font-semibold py-2 my-1 rounded hover:bg-gray-800 transition duration-300"
               >
                 {label}
               </button>
