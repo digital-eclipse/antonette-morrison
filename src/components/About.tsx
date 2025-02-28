@@ -14,9 +14,10 @@ const About: React.FC<AboutProps> = ({ setSection }) => {
       {/* Main Div */}
       <div className='sm:w-[80vw] flex flex-col justify-center items-center bg-white text-bold p-8 '>
         {/* Title Div */}
-        <div className='font-bold text-4xl sm:text-7xl mb-4 text-left w-full'>
+        <div className='font-bold text-4xl sm:text-7xl text-left w-full'>
           About Me
         </div>
+
         {/* Body Div */}
         <div className='flex flex-col sm:flex-row sm:space-x-4 w-full h-full space-y-4 sm:space-y-0'>
           <div className=' bg-[#ffe5ec] p-8 rounded-2xl w-full sm:w-3/4 text-lg'>

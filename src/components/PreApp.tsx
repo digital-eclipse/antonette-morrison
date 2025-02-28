@@ -59,9 +59,9 @@ const PreApp: React.FC<PreAppProps> = ({ setSection }) => {
                         </div>
                         
                         <div className='w-full flex justify-end'>
-                            <button className="bg-black text-white text-xl md:text-2xl lg:ml-[43vh] ml-[10vh] font-bold py-4 px-6 rounded hover:scale-110 transition duration-300">
+                            <a href="https://velocity-client.newton.ca/en/client/journey/home?shortCode=1nwx6degvnj6n" className="bg-black text-white text-xl md:text-2xl lg:ml-[43vh] ml-[10vh] font-bold py-4 px-6 rounded hover:scale-110 transition duration-300">
                                 Apply Here
-                            </button>
+                            </a>
                         </div>
                     </div>
 

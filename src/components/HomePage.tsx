@@ -1,15 +1,20 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect } from 'react'; // Import useEffect
 import Image from 'next/image';
-import { motion } from 'framer-motion'; // Correct import
+import { motion } from 'framer-motion';
 
 // Define the type for the props
 interface HomePageProps {
     setSection: (section: string) => void;
-  }
+}
 
 const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
+
+    // Scroll to top when the component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to the top of the page
+    }, []); // Empty dependency array ensures this runs only once on mount
 
     return (
         // Main Div
@@ -96,9 +101,9 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
 
                         {/* Button Div */}
                         <div className='flex justify-end items-center w-full'>
-                            <button onClick={() => setSection('about')} className="bg-[#ffe5ec] border-2 border-black text-black text-xl sm:text-2xl font-bold py-4 px-6 mt-4 rounded hover:bg-black hover:text-[#ffe5ec] transition duration-300 place-self-end">
+                            <a href="https://velocity-client.newton.ca/en/client/journey/home?shortCode=1nwx6degvnj6n" className="bg-[#ffe5ec] border-2 border-black text-black text-xl sm:text-2xl font-bold py-4 px-6 mt-4 rounded hover:bg-black hover:text-[#ffe5ec] transition duration-300 place-self-end">
                                 Apply Now
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -148,12 +153,11 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
                         </div>
 
                         {/* Button Div */}
-                        {/* Button Div */}
                         <div className='flex justify-end items-center w-full'>
-                                <button onClick={() => setSection('about')} className="bg-[#ffe5ec] border-2 border-[#ffe5ec] text-black text-xl sm:text-2xl font-bold py-4 px-6 mt-4 rounded hover:bg-black hover:text-[#ffe5ec] hover:border-black transition duration-300 place-self-end">
-                                    Apply Now
-                                </button>
-                            </div>
+                            <a href="https://velocity-client.newton.ca/en/client/journey/home?shortCode=1nwx6degvnj6n" className="bg-[#ffe5ec] border-2 border-[#ffe5ec] text-black text-xl sm:text-2xl font-bold py-4 px-6 mt-4 rounded hover:bg-black hover:text-[#ffe5ec] hover:border-black transition duration-300 place-self-end">
+                                Apply Now
+                            </a>
+                        </div>
                       </div>
                 </div>
 
@@ -162,8 +166,6 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
                     
                     {/* Text Div */}
                     <div className='lg:w-[35%] bg-[#ffe5ec] rounded-2xl p-8 rounded-2xl text-base md:text-lg lg:text-xl space-y-2 mx-4 sm:mx-0'>
-{/*                     <div className='bg-white p-8 rounded-2xl text-base md:text-lg lg:text-xl space-y-2'>
- */}
                         <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center lg:text-left'>
                             HELOCs, 2nd and 3rd Mortgages
                         </h1>           
@@ -181,9 +183,9 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
 
                         {/* Button Div */}
                         <div className='flex justify-end items-center w-full'>
-                            <button onClick={() => setSection('about')} className="bg-[#ffe5ec] border-2 border-black text-black text-xl sm:text-2xl font-bold py-4 px-6 mt-4 rounded hover:bg-black hover:text-[#ffe5ec] transition duration-300 place-self-end">
+                            <a href="https://velocity-client.newton.ca/en/client/journey/home?shortCode=1nwx6degvnj6n" className="bg-[#ffe5ec] border-2 border-black text-black text-xl sm:text-2xl font-bold py-4 px-6 mt-4 rounded hover:bg-black hover:text-[#ffe5ec] transition duration-300 place-self-end">
                                 Apply Now
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -233,9 +235,9 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
 
                         {/* Button Div */}
                         <div className='flex justify-end items-center w-full'>
-                            <button onClick={() => setSection('about')} className="bg-[#ffe5ec] border-2 border-[#ffe5ec] text-black text-xl sm:text-2xl font-bold py-4 px-6 mt-4 rounded hover:bg-black hover:text-[#ffe5ec] hover:border-black transition duration-300 place-self-end">
+                            <a href="https://velocity-client.newton.ca/en/client/journey/home?shortCode=1nwx6degvnj6n" className="bg-[#ffe5ec] border-2 border-[#ffe5ec] text-black text-xl sm:text-2xl font-bold py-4 px-6 mt-4 rounded hover:bg-black hover:text-[#ffe5ec] hover:border-black transition duration-300 place-self-end">
                                 Apply Now
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
