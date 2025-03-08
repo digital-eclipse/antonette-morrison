@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ setSection }) => {
       <div className="flex sm:hidden">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="bg-transparent hover:bg-gray-500 p-2 rounded-full transition-all duration-300"
+          className="position-abolute bg-transparent hover:bg-gray-500 p-2 rounded-full transition-all duration-300"
         >
           <svg
             className="w-8 h-8"

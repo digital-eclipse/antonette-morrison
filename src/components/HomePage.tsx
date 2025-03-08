@@ -1,8 +1,10 @@
-"use client"
+"use client";
 
 import React, { useEffect } from 'react'; // Import useEffect
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import TestimonialsSlider from './TestimonialSlider';
+import BackToTop from './BackToTop';
 
 // Define the type for the props
 interface HomePageProps {
@@ -19,6 +21,9 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
     return (
         // Main Div
         <div className='w-full h-full'>
+            <div className='z-50'>
+            <BackToTop/>
+            </div>
             
             {/* Quick And Easy Div */}
             <motion.div className='flex flex-col space-y-6 justify-center items-center  w-full  bg-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center py-16'
@@ -48,6 +53,11 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
                     Chat With Me!
                 </button>
             </motion.div>
+
+            {/* Reviews Div */}
+            <div>
+                <TestimonialsSlider/>
+            </div>
             
             {/* Why Use Div */}
             <div className='flex flex-col lg:flex-row justify-center items-center  sm:min-h-none  w-full bg-[#ffe5ec] text-center text-xl md:text-2xl lg:text-4xl font-bold break-words p-4 space-y-5 lg:space-y-0'>
@@ -61,7 +71,7 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
                             Canadian Mortgages have been constantly changing with rates frequently fluctuating in this competitive market.
                             As a licensed mortgage broker in the provinces of Ontario and Alberta,
                             I have helped many Canadians reach their home ownership goals.
-                            Understanding my client&apos;s unique situations, combined with my 6+ years of experience in Mortgage Brokering and access to over 44 Banks,
+                            Understanding my client&apos;s unique situations, combined with my 9+ years of experience in Mortgage Brokering and access to over 44 Banks,
                             Trust companies, Credit Unions, Private/MIC lenders and partners, I&apos;m able to provide the right mortgage
                             solutions tailored to your needs and goals. I&apos;m a true believer that for every problem there are infinite solutions.
                             I am conveniently available to answer your inquiries on weekdays, weekends, and evenings.
@@ -108,28 +118,40 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
                     </div>
 
                     {/* Image Container */}
-                    <div className='mx-[10vh] relative w-[40vh] h-[40vh] lg:w-[70vh] lg:h-[70vh]'>
+                    <motion.div
+                        className='mx-[10vh] relative w-[40vh] h-[40vh] lg:w-[70vh] lg:h-[70vh]'
+                        initial={{ x: 300, opacity: 0 }} // Slide in from the left
+                        whileInView={{ x: 0, opacity: 1 }} // Slide to the center
+                        viewport={{ amount: 0.4 }} // Trigger animation when 80% of the image is in view
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                    >
                         <Image
                             src='/images/purchases.png'
-                            alt='Antonette'
+                            alt='Purchases'
                             layout='fill'
                             objectFit='contain'
                         />
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Refinancing Div */}
                 <div className='flex lg:flex-row flex-col justify-center items-center lg:h-[80vh] bg-[#ffe5ec] py-[4vh]'>
                     
                     {/* Image Container */}
-                    <div className='relative w-[40vh] h-[40vh] lg:w-[50vh] lg:h-[50vh]'>
+                    <motion.div
+                        className='relative w-[40vh] h-[40vh] lg:w-[50vh] lg:h-[50vh]'
+                        initial={{ x: -300, opacity: 0 }} // Slide in from the right
+                        whileInView={{ x: 0, opacity: 1 }} // Slide to the center
+                        viewport={{ amount: 0.4 }} // Trigger animation when 80% of the image is in view
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                    >
                         <Image
                             src='/images/refinancing.png'
-                            alt='Antonette'
+                            alt='Refinancing'
                             layout='fill'
                             objectFit='contain'
                         />
-                    </div>
+                    </motion.div>
 
                     {/* Text Div */}
                     <div className='bg-white p-8 rounded-2xl text-base md:text-lg lg:text-xl space-y-2 mx-4 sm:mx-0'>
@@ -139,7 +161,8 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
                         </h1>           
                         
                         <h3 className='rounded text-sm sm:text-lg'>
-                            Refinance your mortgage before the maturity date and know some creative ways to make the equity in your home works for you.  
+                            Refinance your mortgage before the maturity date and know some creative ways to make the equity <br>
+                            </br>in your home works for you.  
                         </h3>
 
                         {/* List Div */}
@@ -190,28 +213,40 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
                     </div>
 
                     {/* Image Container */}
-                    <div className='relative w-[40vh] h-[40vh] lg:w-[50vh] lg:h-[50vh]'>
+                    <motion.div
+                        className='relative w-[40vh] h-[40vh] lg:w-[50vh] lg:h-[50vh]'
+                        initial={{ x: 300, opacity: 0 }} // Slide in from the left
+                        whileInView={{ x: 0, opacity: 1 }} // Slide to the center
+                        viewport={{ amount: 0.4 }} // Trigger animation when 80% of the image is in view
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                    >
                         <Image
                             src='/images/heloc.png'
-                            alt='Antonette'
+                            alt='HELOC'
                             layout='fill'
                             objectFit='contain'
                         />
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Reverse Div */}
                 <div className='flex lg:flex-row flex-col justify-center items-center lg:h-[80vh] min-h-[90vh] bg-[#ffe5ec] py-[4vh]'>
                     
                     {/* Image Container */}
-                    <div className='relative w-[40vh] h-[40vh] lg:w-[70vh] lg:h-[70vh]'>
+                    <motion.div
+                        className='relative w-[40vh] h-[40vh] lg:w-[70vh] lg:h-[70vh]'
+                        initial={{ x: -300, opacity: 0 }} // Slide in from the right
+                        whileInView={{ x: 0, opacity: 1 }} // Slide to the center
+                        viewport={{ amount: 0.4 }} // Trigger animation when 80% of the image is in view
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                    >
                         <Image
                             src='/images/reverse.png'
-                            alt='Antonette'
+                            alt='Reverse Mortgages'
                             layout='fill'
                             objectFit='contain'
                         />
-                    </div>
+                    </motion.div>
 
                     {/* Text Div */}
                     <div className='bg-white p-8 rounded-2xl text-base md:text-lg lg:text-xl space-y-4 mx-4 sm:mx-0 sm:w-[40vw]'>
@@ -221,7 +256,7 @@ const HomePage: React.FC<HomePageProps> = ({ setSection }) => {
                         </h1>           
                         
                         <h3 className='rounded text-sm sm:text-lg'>
-                            If you’re over the age of 55 and has build enough equity on your principal home, you maybe eligible for a reverse mortgage. This is a type of loan that is secured against your principal residence giving you financial solution to acces tax-free cash without monthly payment obligations.  
+                            If you&apos;re over the age of 55 and has build enough equity on your principal home, you maybe eligible for a reverse mortgage. This is a type of loan that is secured against your principal residence giving you financial solution to acces tax-free cash without monthly payment obligations.  
                             <br></br><br></br>Reverse mortgage gives the freedom to enjoy your golden years at your home and financially stress free. 
                         </h3>
 
