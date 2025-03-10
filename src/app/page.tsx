@@ -22,9 +22,9 @@ export default function Home() {
 <div className="flex flex-col items-center justify-items-center min-h-screen w-full">
     <Header setSection={setCurrentSection} />
       {currentSection === 'home' && <HomePage setSection={setCurrentSection}/>}
-      {currentSection === 'pre-approvals' && <PreApp setSection={setCurrentSection}/>}
-      {currentSection === 'about' && <About setSection={setCurrentSection}/>}
-      {currentSection === 'contact' && <Contact setSection={setCurrentSection}/>}
+      {currentSection === 'pre-approvals' && <PreApp/>}
+      {currentSection === 'about' && <About/>}
+      {currentSection === 'contact' && <Contact/>}
     <Footer/>
 </div>
   );

@@ -2,14 +2,9 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Footer from './Footer';
 
-interface PreAppProps {
-  setSection: (section: string) => void;
-}
 
-const PreApp: React.FC<PreAppProps> = ({ setSection }) => {
-
+const PreApp = () => {
     return (
         <div className='w-full sm:h-full'>
 
@@ -74,9 +69,6 @@ const PreApp: React.FC<PreAppProps> = ({ setSection }) => {
                     </div>
                 </div>
             </div>
-            <div className=' lg:mt-[5vh] block sm:hidden'>  
-                <Footer setSection={setSection} />  
-            </div> 
         </div>
     )
 }

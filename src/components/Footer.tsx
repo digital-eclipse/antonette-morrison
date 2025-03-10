@@ -5,11 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
-interface FooterProps {
-  setSection: (section: string) => void;
-}
 
-const Footer: React.FC<FooterProps> = ({ setSection }) => {
+const Footer = () => {
   return (
     <div className='bg-[#ffb5c9] flex justify-center items-center w-full pb-[4vh] '>
       {/* Footer Container */}
@@ -54,7 +51,7 @@ const Footer: React.FC<FooterProps> = ({ setSection }) => {
         </div>
 
         {/* Digital Eclipse Watermark */}
-        <div className="fourth-col lg:pr-[8vw] lg:pl-[10vh] w-[10vh] lg:h-[22vh] h-[10vh] flex justify-center items-center text-center lg:ml-[2vh] pt-[6vw]">
+        <div className="fourth-col lg:pr-[8vw] lg:pb-[5vw] lg:pl-[10vh] w-[10vh] lg:h-[22vh] h-[10vh] flex justify-center items-center text-center lg:ml-[2vh] pt-[6vw]">
           <Link
             href="https://digitaleclipse.ca"
             className="ml-[20vh] flex flex-row bg-black text-deyellow text-lg font-bold py-2 px-6 rounded-lg ml-[2vh] shadow-md hover:scale-105 transition duration-300 ease-in-out"

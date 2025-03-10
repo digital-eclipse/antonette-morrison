@@ -1,14 +1,10 @@
 "use client"
 import { Award } from 'lucide-react';
 import React from 'react';
-import Footer from './Footer';
 
-// Define the type for the props
-interface AboutProps {
-  setSection: (section: string) => void;
-}
 
-const About: React.FC<AboutProps> = ({ setSection }) => {
+
+const About = () => {
   return (
     <div className='w-full sm:h-full bg-white flex flex-col justify-center items-center'>
       {/* Main Div */}
@@ -77,9 +73,6 @@ const About: React.FC<AboutProps> = ({ setSection }) => {
           </div>
         </div>
       </div>
-      <div className='lg:mt-[20vh] block sm:hidden w-full'>  
-          <Footer setSection={setSection} />  
-      </div> 
     </div>
   );
 };

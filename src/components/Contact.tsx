@@ -2,13 +2,9 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Footer from './Footer';
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react"
-interface ContactProps {
-  setSection: (section: string) => void;
-}
 
-const Contact: React.FC<ContactProps> = ({ setSection }) => {
+const Contact = () => {
 
     return (
         <div className='w-full h-full flex-col flex bg-white justify-between'>
@@ -87,9 +83,6 @@ const Contact: React.FC<ContactProps> = ({ setSection }) => {
                     </div>
             </div>
             </div>   
-            <div className=' block sm:hidden'>  
-                <Footer setSection={setSection} />  
-            </div> 
         </div>
 
                                         
