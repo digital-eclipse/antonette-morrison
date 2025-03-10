@@ -7,6 +7,7 @@ import HomePage from "@/components/HomePage";
 import PreApp from "@/components/PreApp";
 import About from "@/components/About";
 import Contact from '@/components/Contact';
+import Footer from '@/components/Footer'
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('home');
@@ -24,6 +25,7 @@ export default function Home() {
       {currentSection === 'pre-approvals' && <PreApp setSection={setCurrentSection}/>}
       {currentSection === 'about' && <About setSection={setCurrentSection}/>}
       {currentSection === 'contact' && <Contact setSection={setCurrentSection}/>}
-    </div>
+    <Footer/>
+</div>
   );
 }
